@@ -7,7 +7,7 @@ const googleDatabase = [
     "fastcars2.com",
     "catsareawesome.com"
 ];
-
+// searchInput and db are 2 parameters
 const googleSearch = (searchInput, db) => {
     const matches = db.filter(website => {
         return website.includes(searchInput);

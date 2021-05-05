@@ -1,7 +1,8 @@
 const fetch = require('node-fetch');
 
 //promise style
-const getPeoplePromise = (fetch) => {
+const getPeoplePromise = (fetch) => { //1
+    //input value
     return fetch("https://swapi.py4e.com/api/people")
         .then(response => response.json())
         .then(data => {

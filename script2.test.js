@@ -34,6 +34,7 @@ it("getPeople and return count and results", () => {
     }
     )}))
 
+    //testing all the components together to ensure the program works
     expect.assertions(4);
     return swapi.getPeoplePromise(mockFetch).then(data => {
         expect(mockFetch.mock.calls.length).toBe(1);

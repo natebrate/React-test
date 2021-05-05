@@ -1,5 +1,6 @@
 const googleSearch = require('./script');
 
+//database
 dbMock = [
     "cats.com",
     "fastcars.com",
@@ -20,6 +21,7 @@ describe('googleSearch', () => {
         })
 
     it("Searching Google", () => {
+        //possible input domain parameter implemented as test scripts
         expect(googleSearch("test", dbMock)).toEqual([]);
         expect(googleSearch("cats", dbMock)).toEqual(["cats.com", 'catsareawesome.com'])
     })
