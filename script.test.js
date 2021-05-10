@@ -2,13 +2,9 @@ const googleSearch = require('./script');
 
 //database
 dbMock = [
-    "cats.com",
-    "fastcars.com",
-    "catsareawesome.com",
-    "cataract.com",
-    "instagram.com",
-    "disney.com",
-    "netflix.com"
+    "A.com",
+    "B.com",
+    "C.com",
 ];
 
 //integrate testing
@@ -22,12 +18,16 @@ describe('googleSearch', () => {
 
     it("Searching Google", () => {
         //possible input domain parameter implemented as test scripts
+        // list is not empty: b1 = False, b2 = True
         expect(googleSearch("test", dbMock)).toEqual([]);
-        expect(googleSearch("cats", dbMock)).toEqual(["cats.com", 'catsareawesome.com'])
+        //number of occurrences of element in list: b1, = 0, b2 = 1
+        expect(googleSearch("A.com", dbMock)).toEqual(['A.com'])
     })
 
     it("work with undefined and null input", () => {
+        //lists is empty: b1 = True, b2 = False
         expect(googleSearch(undefined, dbMock)).toEqual([]);
+        // list is null: b1 = True, b2 = False
         expect(googleSearch(null, dbMock)).toEqual([]);
     })
 

@@ -2,6 +2,8 @@ const fetch = require('node-fetch');
 
 //promise style
 const getPeoplePromise = (fetch) => { //1
+    //the function is to fetch an api from the domain and return the data
+    //else throw an error with json cannot be returned
     //input value
     return fetch("https://swapi.py4e.com/api/people")
         .then(response => response.json())
