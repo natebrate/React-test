@@ -36,5 +36,5 @@ module.exports = {
     getPeople
 };
 
-// getPeoplePromise(fetch).then(console.log);
-// getPeople(fetch).then(console.log);
+getPeoplePromise(fetch).then(console.log);
+getPeople(fetch).then(console.log);
